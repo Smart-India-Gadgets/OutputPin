@@ -8,7 +8,7 @@ OutputPin::OutputPin()
 
 OutputPin::OutputPin(uint8_t pin)
 {
-  this->OutputPin(pin, false);
+  OutputPin(pin, false);
 }
 
 OutputPin::OutputPin(uint8_t pin, bool activeLow)
