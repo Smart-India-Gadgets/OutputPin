@@ -6,28 +6,43 @@ A library for controlling output pins in embedded systems
 
 Just initialise the OutputPin with the target PIN
 
+#### Option 1
 ```cpp
-OutputPin led(PIN_INDIC_LED);
+OutputPin led(PIN_LED);
+// OR
+OutputPin led(PIN_LED, true); // second parameter bool `activeLow`
 
 void setup() {
     // your setup code here
 }
 
 void loop() {
-    led.on();
-    delay(1000);
-    led.off();
-    delay(1000);
-
     // your loop code here
 }
 ```
 
-### Functions
+#### Option 2
+```cpp
+OutputPin led;
+
+void setup() {
+    led.begin(PIN_LED);
+    // OR
+    led.begin(PIN_LED, true); // second parameter bool `activeLow`
+}
+
+void loop() {
+    // your loop code here
+}
+```
+
+### All Functions
 
 ```cpp
 // Initialise the output pin
-OutputPin led(PIN_INDIC_LED);
+OutputPin led(PIN_LED, [true]);
+// OR
+led.begin(PIN_LED, [true]);
 
 // Turn on the LED
 led.on();
@@ -38,7 +53,7 @@ led.off();
 // Toggle the LED on and off after each call
 led.toggle();
 
-// Blink the LED 2 times with default 100ms gap
+// Blink the LED 1 time with default 100ms gap
 led.blink();
 
 // Blink the LED 4 times with default 100ms gap
