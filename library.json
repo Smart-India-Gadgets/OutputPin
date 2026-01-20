@@ -1,6 +1,6 @@
 {
   "name": "OutputPin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A library for controlling output pins in embedded systems",
   "keywords": "output, pin, control, embedded",
   "repository":
