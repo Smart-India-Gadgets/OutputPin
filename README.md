@@ -4,7 +4,39 @@ A library for controlling output pins in embedded systems
 
 ### Setup
 
-Just initialise the OutputPin with the target PIN
+### Installation
+
+1.  Open  [platformio.ini](https://docs.platformio.org/en/latest/projectconf/index.html), a project configuration file located in the root of PlatformIO project.
+2.  Add the following line to the  [lib_deps](https://docs.platformio.org/en/latest/projectconf/sections/env/options/library/lib_deps.html)  option of  `[env:]`  section:
+    
+    ```cpp
+    siglibs/OutputPin@^1.0.2
+    ```
+    
+3.  Build a project, PlatformIO will automatically install dependencies.
+
+### Include it
+
+1.  Add the following line to your source code:
+    
+    ```cpp
+    #include <OutputPin.h>
+    ```
+    
+2.  Check  [Examples](https://registry.platformio.org/libraries/siglibs/OutputPin/examples)  on how to use the  **OutputPin**  library.
+
+### Command Line Interface
+
+1.  Open  [PlatformIO Core CLI](https://docs.platformio.org/en/latest/core/index.html)
+2.  Change directory (`cd`) to the PlatformIO project where  [platformio.ini](https://docs.platformio.org/en/latest/projectconf/index.html)  is located.
+3.  Copy the following  [pio pkg install](https://docs.platformio.org/en/latest/core/userguide/pkg/cmd_install.html)  command and paste into the CLI shell, press  Enter:
+    
+    ```cpp
+    pio pkg install --library "siglibs/OutputPin@^1.0.2"
+    ```
+
+
+### Usage
 
 #### Option 1
 ```cpp
